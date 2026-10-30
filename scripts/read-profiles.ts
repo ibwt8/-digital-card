@@ -12,8 +12,15 @@ const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
 
 try {
-  const profiles = await prisma.profile.findMany();
-  console.log(profiles);
+  const profiles = await prisma.profile.findMany({
+    include: {
+      skills: true,
+      links: true,
+      experience: true,
+      projects: true,
+    },
+  });
+  console.dir(profiles, { depth: null });
 } finally {
   await prisma.$disconnect();
 }
