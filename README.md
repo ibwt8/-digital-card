@@ -1,7 +1,5 @@
 # Digital Card
 
-Моя цифровая визитка с GraphQL API. Через Apollo Sandbox можно посмотреть профиль, навыки, опыт работы и проекты.
-
 Проект написан на TypeScript и NestJS. Для работы с PostgreSQL используется Prisma.
 
 ## Запуск
